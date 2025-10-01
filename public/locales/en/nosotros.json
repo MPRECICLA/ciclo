@@ -1,0 +1,66 @@
+{
+    "intro": "Construction is one of the industries with the greatest impact on the environment and generates the most waste. This problem motivated us to found CICLO in 2015, with the idea of developing high-quality sustainable materials using innovation and research as the main drivers to achieve our vision. For 5 years, we developed the project and obtained the necessary licenses to finally start operations in 2020.",
+    "mision": {
+        "titulo": "Mission",
+        "descripcion": "Provide sustainable solutions to the construction industry through comprehensive waste management and the manufacture of innovative eco materials, with measurable environmental impact and backed by international certifications."
+    },
+    "vision": {
+        "titulo": "Vision",
+        "descripcion": "To become the leading company in Latin America in C&D waste management and eco materials, leading the transformation of construction towards a circular and sustainable model."
+    },
+    "proposito": {
+        "titulo": "Purpose",
+        "descripcion": "Decarbonize the construction industry with innovative and sustainable solutions through waste management and recycling and the development of eco materials."
+    },
+    "aliados_titulo": "Our Strategic Allies",
+    "aliados": [
+        {
+            "titulo": "EPD - International EPD System",
+            "img": "/pages/nosotros/EPD.png"
+        },
+        {
+            "titulo": "UTEC - University of Engineering and Technology",
+            "img": "/pages/nosotros/UTEC.png"
+        },
+        {
+            "titulo": "Peru GBC - Peru Green Building Council",
+            "img": "/pages/nosotros/PGBC.png"
+        },
+        {
+            "titulo": "IMPAQTO Capital",
+            "img": "/pages/nosotros/IMPAQTO.png"
+        },
+        {
+            "titulo": "CCL - Lima Chamber of Commerce",
+            "img": "/pages/nosotros/CCL.png"
+        },
+        {
+            "titulo": "SAINT - GOBAIN",
+            "img": "/pages/nosotros/SAINTGOBAIN.png"
+        }
+    ],
+    "politicas_titulo": "Corporate Policies",
+    "politicas_intro": "Access our policies that are part of our Integrated Management System and reflect our commitment to quality, environmental care, and safety.",
+    "politicas": [
+        {
+            "titulo": "Unsafe Work Refusal Policy",
+            "file": "/docs/SSOMA-PO1 Política de negativa al trabajo inseguro-V2.pdf"
+        },
+        {
+            "titulo": "SIG Policy",
+            "file": "/docs/SIG-PO1 Política SIG -V2.pdf"
+        },
+        {
+            "titulo": "Labor Inclusion Policy",
+            "file": "/docs/RRHH-PO1 Política de Inclusión Laboral-V2.pdf"
+        },
+        {
+            "titulo": "Fatigue and Drowsiness Policy",
+            "file": "/docs/SSOMA-PO2 Política de fatiga y somnolencia-V2-.pdf"
+        },
+        {
+            "titulo": "Scope of the Integrated Management System",
+            "file": "/docs/SIG-FR1 Alcance del Sistema Integrado de Gestión v.02.pdf"
+        }
+    ]
+}

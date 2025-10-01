@@ -1,0 +1,66 @@
+{
+    "intro": "La construcción es una de las industrias que más impacto tiene en el medio ambiente y la que más residuos genera. Esta problemática nos motivó a fundar CICLO en el año 2015, con la idea de desarrollar materiales sustentables de calidad usando la innovación e investigación como motores principales para viabilizar nuestra visión. Durante 5 años desarrollamos el proyecto y obtuvimos las licencias necesarias para finalmente iniciar operaciones en el año 2020.",
+    "mision": {
+        "titulo": "Misión",
+        "descripcion": "Brindar soluciones sostenibles a la industria de la construcción mediante la gestión integral de residuos y la fabricación de eco materiales innovadores, con impacto ambiental medible y el respaldo de certificaciones internacionales."
+    },
+    "vision": {
+        "titulo": "Visión",
+        "descripcion": "Consolidarnos como la empresa referente en Latinoamérica en gestión de RCD y eco materiales, liderando la transformación de la construcción hacia un modelo circular y sostenible."
+    },
+    "proposito": {
+        "titulo": "Propósito",
+        "descripcion": "Descarbonizar la industria de la construcción con soluciones innovadoras y sustentables a través de la gestión y reciclaje de los residuos y el desarrollo de eco materiales"
+    },
+    "aliados_titulo": "Nuestros Aliados Estratégicos",
+    "aliados": [
+        {
+            "titulo": "EPD - International EPD System",
+            "img": "/pages/nosotros/EPD.png"
+        },
+        {
+            "titulo": "UTEC - Universidad de Ingeniería y Tecnología",
+            "img": "/pages/nosotros/UTEC.png"
+        },
+        {
+            "titulo": "Perú GBC - Perú Green Building Council",
+            "img": "/pages/nosotros/PGBC.png"
+        },
+        {
+            "titulo": "CCL - Cámara de Comercio de Lima",
+            "img": "/pages/nosotros/CCL.png"
+        },
+        {
+            "titulo": "IMPAQTO Capital",
+            "img": "/pages/nosotros/IMPAQTO.png"
+        },
+        {
+            "titulo": "SAINT - GOBAIN",
+            "img": "/pages/nosotros/SAINTGOBAIN.png"
+        }
+    ],
+    "politicas_titulo": "Políticas Corporativas",
+    "politicas_intro": "Accede a nuestras políticas que forman parte de nuestro Sistema Integrado de Gestión y que reflejan nuestro compromiso con la calidad, el cuidado del medio ambiente y la seguridad.",
+    "politicas": [
+        {
+            "titulo": "Política de Negativa al Trabajo Inseguro",
+            "file": "/docs/SSOMA-PO1 Política de negativa al trabajo inseguro-V2.pdf"
+        },
+        {
+            "titulo": "Política SIG",
+            "file": "/docs/SIG-PO1 Política SIG -V2.pdf"
+        },
+        {
+            "titulo": "Política de Inclusión Laboral",
+            "file": "/docs/RRHH-PO1 Política de Inclusión Laboral-V2.pdf"
+        },
+        {
+            "titulo": "Política de Fatiga y Somnolencia",
+            "file": "/docs/SSOMA-PO2 Política de fatiga y somnolencia-V2-.pdf"
+        },
+        {
+            "titulo": "Alcance del Sistema Integrado de Gestión",
+            "file": "/docs/SIG-FR1 Alcance del Sistema Integrado de Gestión v.02.pdf"
+        }
+    ]
+}
