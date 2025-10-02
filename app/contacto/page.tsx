@@ -44,15 +44,15 @@ export default function ContactoPage() {
         if (validate()) {
             setStatus('Enviando...');
             emailjs.send(
-                'service_p6q4vdu',
-                'template_ezuhvpu',
+                'service_6wwnqbb',
+                'template_xgls3g9',
                 {
                     from_name: form.nombre,
                     from_email: form.email,
                     subject: form.asunto,
                     message: form.mensaje,
                 },
-                'qwRtMAUUeU0B_yrRf'
+                'XANJ2EtmaiGHpdHHS'
             )
                 .then(() => {
                     setStatus(t('exito'));
