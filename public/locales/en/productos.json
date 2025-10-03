@@ -1,25 +1,51 @@
 {
     "titulo": "Discover our products",
-    "agregados": {
-        "titulo": "Recycled Aggregates",
-        "descripcion": "Our recycled aggregates are designed for use in non-structural applications. We offer different types according to their particle size distribution.",
-        "ficha": "Technical Sheet"
-    },
-    "adoquines": {
-        "titulo": "Pavers",
-        "descripcion": "We offer the first eco-pavers in Latin America made with recycled aggregates and certified with the EPD eco-label. We manufacture type I, II, and III pavers in various colors.",
-        "ficha": "Technical Sheet"
-    },
-    "ladrillos": {
-        "titulo": "Bricks",
-        "descripcion": "Our bricks can be used in various non-load-bearing applications. They measure 9 cm wide, 18 cm high, and 39 cm long.",
-        "ficha": "Technical Sheet"
-    },
-    "separadores": {
-        "titulo": "Concrete Spacers",
-        "descripcion": "The concrete spacers are made with high-strength recycled concrete and incorporate injected nylon hooks, ensuring proper separation between the reinforcing steel and the outer surface of the concrete, complying with the coverage required by technical standard E.060.",
-        "ficha": "Technical Sheet"
-    },
+    "productos": [
+        {
+            "key": "agregados",
+            "titulo": "Recycled Aggregates",
+            "descripcion": "Our recycled aggregates are designed for use in non-structural applications. We offer different types according to their particle size distribution.",
+            "ficha": "Technical Sheet",
+            "img": "/pages/productos/agregados.png",
+            "pdf": {
+                "href": "/pages/productos/agregados.pdf",
+                "nombre": "Technical_Sheet_Aggregates.pdf"
+            }
+        },
+        {
+            "key": "adoquines",
+            "titulo": "Pavers",
+            "descripcion": "We offer the first eco-pavers in Latin America made with recycled aggregates and certified with the EPD eco-label. We manufacture type I, II, and III pavers in various colors.",
+            "ficha": "Technical Sheet",
+            "img": "/pages/productos/adoquin.png",
+            "pdf": {
+                "href": "/pages/productos/adoquines.pdf",
+                "nombre": "Technical_Sheet_Pavers.pdf"
+            }
+        },
+        {
+            "key": "ladrillos",
+            "titulo": "Bricks",
+            "descripcion": "Our bricks can be used in various non-load-bearing applications. They measure 9 cm wide, 18 cm high, and 39 cm long.",
+            "ficha": "Technical Sheet",
+            "img": "/pages/productos/ladrillo.png",
+            "pdf": {
+                "href": "/pages/productos/ladrillos.pdf",
+                "nombre": "Technical_Sheet_Bricks.pdf"
+            }
+        },
+        {
+            "key": "separadores",
+            "titulo": "Concrete Spacers",
+            "descripcion": "The concrete spacers are made with high-strength recycled concrete and incorporate injected nylon hooks, ensuring proper separation between the reinforcing steel and the outer surface of the concrete, complying with the coverage required by technical standard E.060.",
+            "ficha": "Technical Sheet",
+            "img": "/pages/productos/separadores.png",
+            "pdf": {
+                "href": "/pages/productos/separadores.pdf",
+                "nombre": "Technical_Sheet_Spacers.pdf"
+            }
+        }
+    ],
     "cta": {
         "titulo": "Didn't find what you were looking for?",
         "descripcion": "Contact us and we will develop a solution tailored to your needs.",

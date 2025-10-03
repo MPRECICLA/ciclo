@@ -1,25 +1,51 @@
 {
     "titulo": "Conoce nuestros productos",
-    "agregados": {
-        "titulo": "Agregados Reciclados",
-        "descripcion": "Nuestro agregados reciclados está diseñados para ser usados en aplicaciones no estructurales. Contamos con diferentes tipos según su granulometría.",
-        "ficha": "Ficha Técnica"
-    },
-    "adoquines": {
-        "titulo": "Adoquines",
-        "descripcion": "Contamos con los primeros eco adoquines de Latinoamérica fabricados con agregados reciclados en contar con la eco etiqueta EPD. Elaboramos adoquines tipo I, II y III, con diversos colores.",
-        "ficha": "Ficha Técnica"
-    },
-    "ladrillos": {
-        "titulo": "Ladrillos",
-        "descripcion": "Nuestros ladrillos pueden ser usados en diferentes aplicaciones no portantes. Cuenta con medidas de 9 cm de ancho, 18 cm de alto y 39 cm de largo.",
-        "ficha": "Ficha Técnica"
-    },
-    "separadores": {
-        "titulo": "Separadores de Concreto",
-        "descripcion": "Los separadores de concreto están elaborados con concreto reciclado de alta resistancia e incorpora ganchos de nylon inyectado, lo que garantiza la correcta separación entre el acero de refuerzo y la superficie exterior del concreto, cumpliendo con el recubrimiento exigido por la norma técnica E.060",
-        "ficha": "Ficha Técnica"
-    },
+    "productos": [
+        {
+            "key": "agregados",
+            "titulo": "Agregados Reciclados",
+            "descripcion": "Nuestro agregados reciclados está diseñados para ser usados en aplicaciones no estructurales. Contamos con diferentes tipos según su granulometría.",
+            "ficha": "Ficha Técnica",
+            "img": "/pages/productos/agregados.png",
+            "pdf": {
+                "href": "/pages/productos/agregados.pdf",
+                "nombre": "Ficha_Tecnica_Agregados.pdf"
+            }
+        },
+        {
+            "key": "adoquines",
+            "titulo": "Adoquines",
+            "descripcion": "Contamos con los primeros eco adoquines de Latinoamérica fabricados con agregados reciclados en contar con la eco etiqueta EPD. Elaboramos adoquines tipo I, II y III, con diversos colores.",
+            "ficha": "Ficha Técnica",
+            "img": "/pages/productos/adoquin.png",
+            "pdf": {
+                "href": "/pages/productos/adoquines.pdf",
+                "nombre": "Ficha_Tecnica_Adoquines.pdf"
+            }
+        },
+        {
+            "key": "ladrillos",
+            "titulo": "Ladrillos",
+            "descripcion": "Nuestros ladrillos pueden ser usados en diferentes aplicaciones no portantes. Cuenta con medidas de 9 cm de ancho, 18 cm de alto y 39 cm de largo.",
+            "ficha": "Ficha Técnica",
+            "img": "/pages/productos/ladrillo.png",
+            "pdf": {
+                "href": "/pages/productos/ladrillos.pdf",
+                "nombre": "Ficha_Tecnica_Ladrillos.pdf"
+            }
+        },
+        {
+            "key": "separadores",
+            "titulo": "Separadores de Concreto",
+            "descripcion": "Los separadores de concreto están elaborados con concreto reciclado de alta resistancia e incorpora ganchos de nylon inyectado, lo que garantiza la correcta separación entre el acero de refuerzo y la superficie exterior del concreto, cumpliendo con el recubrimiento exigido por la norma técnica E.060",
+            "ficha": "Ficha Técnica",
+            "img": "/pages/productos/separadores.png",
+            "pdf": {
+                "href": "/pages/productos/separadores.pdf",
+                "nombre": "Ficha_Tecnica_Separadores.pdf"
+            }
+        }
+    ],
     "cta": {
         "titulo": "¿No encontraste lo que buscabas?",
         "descripcion": "Contáctanos y desarrollaremos una solución a la medida de tus necesidades.",

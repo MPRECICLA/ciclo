@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import type { RefObject } from "react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import '../../styles/spin-variable.css';
@@ -10,8 +9,15 @@ import { motion } from "framer-motion";
 
 interface Producto {
     key: string;
-    label: string;
-    ref: RefObject<HTMLDivElement | null>;
+    titulo: string;
+    descripcion: string;
+    ficha: string;
+    img: string;
+    pdf: {
+        href: string;
+        nombre: string;
+    };
+    ref: React.RefObject<HTMLDivElement>;
 }
 
 const tabVariants = {
@@ -36,33 +42,28 @@ const contentVariants = {
 };
 
 export default function ProductosPage() {
-    const { t } = useTranslation("productos");
+    const { t, i18n } = useTranslation("productos");
     const router = useRouter();
-    const productos: Producto[] = [
-        {
-            key: "agregados",
-            label: t("agregados.titulo"),
-            ref: useRef<HTMLDivElement>(null),
-        },
-        {
-            key: "adoquines",
-            label: t("adoquines.titulo"),
-            ref: useRef<HTMLDivElement>(null),
-        },
-        {
-            key: "ladrillos",
-            label: t("ladrillos.titulo"),
-            ref: useRef<HTMLDivElement>(null),
-        },
-        {
-            key: "separadores",
-            label: t("separadores.titulo"),
-            ref: useRef<HTMLDivElement>(null),
-        },
-    ];
-    const [active, setActive] = useState<string>(productos[0].key);
+    const [productos, setProductos] = useState<Producto[]>([]);
+    const [active, setActive] = useState<string>("");
 
     useEffect(() => {
+        const fetchProductos = async () => {
+            const lang = i18n.language || "es";
+            const res = await fetch(`/locales/${lang}/productos.json`);
+            const data = await res.json();
+            const productosWithRefs = (data.productos || []).map((p: any) => ({
+                ...p,
+                ref: React.createRef<HTMLDivElement>()
+            }));
+            setProductos(productosWithRefs);
+            if (productosWithRefs.length > 0) setActive(productosWithRefs[0].key);
+        };
+        fetchProductos();
+    }, [i18n.language]);
+
+    useEffect(() => {
+        if (productos.length === 0) return;
         const sectionRefs = productos.map(p => p.ref.current).filter(Boolean);
         if (sectionRefs.length === 0) return;
         const handleIntersect = (entries: IntersectionObserverEntry[]) => {
@@ -145,7 +146,7 @@ export default function ProductosPage() {
                                 initial="hidden"
                                 animate="visible"
                             >
-                                {p.label}
+                                {p.titulo}
                             </motion.button>
                         );
                     })}
@@ -155,24 +156,6 @@ export default function ProductosPage() {
                         const circleAnim = i % 2 === 0
                             ? { initial: "hiddenLeft", animate: "visibleLeft" }
                             : { initial: "hiddenRight", animate: "visibleRight" };
-                        const imgSrc = [
-                            "/pages/productos/agregados.png",
-                            "/pages/productos/adoquin.png",
-                            "/pages/productos/ladrillo.png",
-                            "/pages/productos/separadores.png"
-                        ][i];
-                        const pdfHref = [
-                            "/pages/productos/agregados.pdf",
-                            "/pages/productos/adoquines.pdf",
-                            "/pages/productos/ladrillos.pdf",
-                            "/pages/productos/separadores.pdf"
-                        ][i];
-                        const pdfName = [
-                            "Ficha_Tecnica_Agregados.pdf",
-                            "Ficha_Tecnica_Adoquines.pdf",
-                            "Ficha_Tecnica_Ladrillos.pdf",
-                            "Ficha_Tecnica_Separadores.pdf"
-                        ][i];
                         return (
                             <div
                                 key={p.key}
@@ -205,7 +188,7 @@ export default function ProductosPage() {
                                                 }}
                                             ></div>
                                         </div>
-                                        <Image src={imgSrc} alt={p.label} width={220} height={220} className="object-contain" />
+                                        <Image src={p.img} alt={p.titulo} width={220} height={220} className="object-contain" />
                                     </div>
                                 </motion.div>
                                 <motion.div
@@ -215,16 +198,16 @@ export default function ProductosPage() {
                                     whileInView="visible"
                                     viewport={{ once: true, amount: 0.5 }}
                                 >
-                                    <h4 className="text-base sm:text-xl lg:text-2xl text-left mb-4 font-medium font-bold">{p.label}</h4>
-                                    <p className="mb-4">{t(`${p.key}.descripcion`)}</p>
+                                    <h4 className="text-base sm:text-xl lg:text-2xl text-left mb-4 font-medium font-bold">{p.titulo}</h4>
+                                    <p className="mb-4">{p.descripcion}</p>
                                     <div className="mt-6">
                                         <a
-                                            href={pdfHref}
-                                            download={pdfName}
+                                            href={p.pdf.href}
+                                            download={p.pdf.nombre}
                                             className="bg-[#FFD34E] text-[#1F1B3B] font-medium px-6 py-2 rounded-lg text-base shadow flex items-center gap-2 cursor-pointer transition-colors duration-200"
                                             style={{ display: 'inline-flex', alignItems: 'center' }}
                                         >
-                                            {t(`${p.key}.ficha`)}
+                                            {p.ficha}
                                             <span className="text-lg">↓</span>
                                         </a>
                                     </div>
