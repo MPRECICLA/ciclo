@@ -43,26 +43,35 @@ export default function ContactoPage() {
         e.preventDefault();
         if (validate()) {
             setStatus('Enviando...');
-            emailjs.send(
-                'service_6wwnqbb',
-                'template_xgls3g9',
-                {
-                    from_name: form.nombre,
-                    from_email: form.email,
-                    subject: form.asunto,
-                    message: form.mensaje,
+
+            fetch("https://formspree.io/f/mwprqzpg", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
                 },
-                'XANJ2EtmaiGHpdHHS'
-            )
-                .then(() => {
-                    setStatus(t('exito'));
-                    setForm({ nombre: '', email: '', asunto: '', mensaje: '' });
+                body: JSON.stringify({
+                    nombre: form.nombre,
+                    email: form.email,
+                    asunto: form.asunto,
+                    mensaje: form.mensaje,
+                    _subject: `Nuevo mensaje de ${form.nombre}`,
+                    _replyto: form.email
+                })
+            })
+                .then(res => {
+                    if (res.ok) {
+                        setStatus(t('exito'));
+                        setForm({ nombre: '', email: '', asunto: '', mensaje: '' });
+                    } else {
+                        throw new Error('Error al enviar');
+                    }
                 })
                 .catch(() => {
                     setStatus(t('error'));
                 });
         }
     }
+
 
     return (
         <motion.main
