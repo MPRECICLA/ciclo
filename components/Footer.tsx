@@ -61,9 +61,10 @@ const Footer = () => {
                 <div className="min-w-[120px]">
                     <h3 className="font-bricolage font-medium text-lg md:text-xl lg:text-2xl mb-6">{t('footer.productos')}</h3>
                     <ul className="font-bricolage font-normal text-sm md:text-sm lg:text-sm space-y-4 text-[#F2F2F2]">
-                        <li className="text-base md:text-sm lg:text-sm">{t('footer.productos_ecoadoquines')}</li>
-                        <li className="text-base md:text-sm lg:text-sm">{t('footer.productos_bloques')}</li>
                         <li className="text-base md:text-sm lg:text-sm">{t('footer.productos_agregados')}</li>
+                        <li className="text-base md:text-sm lg:text-sm">{t('footer.productos_adoquines')}</li>
+                        <li className="text-base md:text-sm lg:text-sm">{t('footer.productos_ladrillos')}</li>
+                        <li className="text-base md:text-sm lg:text-sm">{t('footer.productos_separadores')}</li>
                     </ul>
                 </div>
                 <div className="min-w-[150px]">
