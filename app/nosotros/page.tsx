@@ -26,6 +26,7 @@ export default function NosotrosPage() {
             setIsFading(false);
         }, 250);
     };
+
     return (
         <>
             <main className="max-w-6xl mx-auto px-4 py-12 overflow-x-hidden">
@@ -133,8 +134,9 @@ export default function NosotrosPage() {
                         transition={{ duration: 0.6, delay: 0.1 }}
                     >
                         <div className="relative w-[320px] h-[320px] flex items-center justify-center group transition-all duration-300 hover:scale-105">
+                            {/* Flechas laterales en desktop */}
                             <button
-                                className="absolute left-[-56px] top-1/2 -translate-y-1/2 text-[#2451D7] text-4xl font-bold bg-transparent border-none p-0 m-0 cursor-pointer"
+                                className="hidden md:block absolute left-[-56px] top-1/2 -translate-y-1/2 text-[#2451D7] text-4xl font-bold bg-transparent border-none p-0 m-0 cursor-pointer"
                                 onClick={() => handleChangeAliado((index - 1 + aliados.length) % aliados.length)}
                                 aria-label="Anterior aliado"
                                 style={{ opacity: 0.9 }}
@@ -151,13 +153,31 @@ export default function NosotrosPage() {
                                 />
                             </div>
                             <button
-                                className="absolute right-[-56px] top-1/2 -translate-y-1/2 text-[#2451D7] text-4xl font-bold bg-transparent border-none p-0 m-0 cursor-pointer"
+                                className="hidden md:block absolute right-[-56px] top-1/2 -translate-y-1/2 text-[#2451D7] text-4xl font-bold bg-transparent border-none p-0 m-0 cursor-pointer"
                                 onClick={() => handleChangeAliado((index + 1) % aliados.length)}
                                 aria-label="Siguiente aliado"
                                 style={{ opacity: 0.9 }}
                             >
                                 {">"}
                             </button>
+                            <div className="flex md:hidden w-full justify-center gap-10 absolute left-0 -bottom-12">
+                                <button
+                                    className="text-[#2451D7] text-4xl font-bold bg-transparent border-none p-0 m-0 cursor-pointer"
+                                    onClick={() => handleChangeAliado((index - 1 + aliados.length) % aliados.length)}
+                                    aria-label="Anterior aliado"
+                                    style={{ opacity: 0.9 }}
+                                >
+                                    {"<"}
+                                </button>
+                                <button
+                                    className="text-[#2451D7] text-4xl font-bold bg-transparent border-none p-0 m-0 cursor-pointer"
+                                    onClick={() => handleChangeAliado((index + 1) % aliados.length)}
+                                    aria-label="Siguiente aliado"
+                                    style={{ opacity: 0.9 }}
+                                >
+                                    {">"}
+                                </button>
+                            </div>
                         </div>
                     </motion.div>
                 </div>
